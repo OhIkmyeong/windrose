@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WindRose</title>
+<link href="./css/ipt.css" rel="stylesheet" type="text/css"/>
+<link href="./css/windrose.css" rel="stylesheet" type="text/css"/>
+<script src="./js/windrose.js" type="module"></script>
+</head>
+<body>
+
+<nav>
+    <a href="./WindRose.html">WindRose</a>
+    <a href="./PieGraph.html">PieGraph</a>
+    <a href="./BarGraph.html">BarGraph</a>
+</nav>
+
+<section id="sect_opt">
+    <label id="lbl-check">
+        <input type="checkbox" id="is-rel" checked/>
+        <span class="lbl">상대값 그래프 만들기</span>
+    </label>
+
+    <select id="sel">
+        <option value="n1" selected>N1</option>
+        <option value="n2">N2</option>
+        <option value="n3">N3</option>
+        <option value="n4">N4</option>
+        <option value="n5">N5</option>
+        <option value="n6">N6</option>
+        <option value="n7">N7</option>
+        <option value="n8">N8</option>
+        <option value="n9">N9</option>
+        <option value="n10">N10</option>
+        <option value="n11">N11</option>
+        <option value="n12">N12</option>
+        <option value="n13">N13</option>
+        <option value="n14">N14</option>
+        <option value="n15">N15</option>
+        <option value="n16">N16</option>
+        <option value="n17">N17</option>
+        <option value="n18">N18</option>
+        <option value="n19">N19</option>
+        <option value="n20">N20</option>
+    </select>
+</section>
+
+<section id="sect_ipt">
+    <label>
+        <input value="1.3" type="number" placeholder="N" id="ipt-M1"/>
+        <span class="lbl">M1</span>
+    </label>
+    <label>
+        <input value="4" type="number" placeholder="NNE" id="ipt-M2"/>
+        <span class="lbl">M2</span>
+    </label>
+    <label>
+        <input value="8.3" type="number" placeholder="NE" id="ipt-M3"/>
+        <span class="lbl">M3</span>
+    </label>
+    <label>
+        <input value="8.5" type="number" placeholder="ENE" id="ipt-M4"/>
+        <span class="lbl">M4</span>
+    </label>
+    <!--  -->
+
+    <label>
+        <input value="12.4" type="number" placeholder="E" id="ipt-M5"/>
+        <span class="lbl">M5</span>
+    </label>
+    <label>
+        <input value="18.3" type="number" placeholder="ESE" id="ipt-M6"/>
+        <span class="lbl">M6</span>
+    </label>
+    <label>
+        <input value="23" type="number" placeholder="SE" id="ipt-M7"/>
+        <span class="lbl">M7</span>
+    </label>
+    <label>
+        <input value="13.3" type="number" placeholder="SSE" id="ipt-M8"/>
+        <span class="lbl">M8</span>
+    </label>
+    <!--  -->
+
+    <label>
+        <input value="5.2" type="number" placeholder="S" id="ipt-M9"/>
+        <span class="lbl">M9</span>
+    </label>
+    <label>
+        <input value="3.6" type="number" placeholder="SSW" id="ipt-M10"/>
+        <span class="lbl">M10</span>
+    </label>
+    <label>
+        <input value="3" type="number" placeholder="SW" id="ipt-M11"/>
+        <span class="lbl">M11</span>
+    </label>
+    <label>
+        <input value="1.1" type="number" placeholder="WSW" id="ipt-M12"/>
+        <span class="lbl">M12</span>
+    </label>
+    <!--  -->
+
+    <button id="btn">점찍기</button>
+</section><!-- sect_ipt -->
+
+<section id="sect_graph-windrose">
+
+    <img src="./img/windrose.svg" alt="12각형" class="polygon">
+    
+    <div id="line-M1" style="--i:0;"><span class="dot"></span></div>
+    <div id="line-M2" style="--i:1;"><span class="dot"></span></div>
+    <div id="line-M3" style="--i:2;"><span class="dot"></span></div>
+    <div id="line-M4" style="--i:3;"><span class="dot"></span></div>
+
+    <div id="line-M5" style="--i:4;"><span class="dot"></span></div>
+    <div id="line-M6" style="--i:5;"><span class="dot"></span></div>
+    <div id="line-M7" style="--i:6;"><span class="dot"></span></div>
+    <div id="line-M8" style="--i:7;"><span class="dot"></span></div>
+
+    <div id="line-M9" style="--i:8;"><span class="dot"></span></div>
+    <div id="line-M10" style="--i:9;"><span class="dot"></span></div>
+    <div id="line-M11" style="--i:10;"><span class="dot"></span></div>
+    <div id="line-M12" style="--i:11;"><span class="dot"></span></div>
+
+</section><!-- sect_graph -->
+
+</body>
+</html>
