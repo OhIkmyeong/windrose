@@ -1,0 +1,94 @@
+@charset "utf-8";
+
+:root{
+    --m1 : #B1D4E0;
+    --m2 : #2E8BC0;
+    --m3 : #145DA0;
+    --m4 : #0C2D48;
+
+    --m5 : #C3E0E5;
+    --m6 : #5885AF;
+    --m7 : #41729F;
+    --m8 : #274472;
+
+    --m9 : #BFD7ED;
+    --m10 : #60A3D9;
+    --m11 : #0074B7;
+    --m12 : #003B73;
+
+    --most : radial-gradient(#005273,rgb(0, 255, 179));
+}
+
+#sect_graph-pie{
+    display:flex;flex-wrap:wrap;
+    justify-content:center; align-items:center;
+    height:500px;
+    overflow:hidden;
+}
+
+#bg{
+    position:absolute;
+    width:100%;height:100%;
+}
+
+#pie{
+    position:absolute; /* overflow:hidden; */
+    width:91%; aspect-ratio:1/1;
+    border-radius:50%;
+}
+
+[id ^= "line-"]{
+    position:absolute; overflow:hidden;
+    top:50%;left:50%;
+    transform:translate(-50%,-50%);
+    width:100%;
+    aspect-ratio:1/1;
+    border-radius:50%;
+    mix-blend-mode: multiply;}
+
+
+#line-M1{
+    background:var(--m1);
+    clip-path:polygon(50% 0, 50% 50% ,78.8% 0);}
+#line-M2{
+    background:var(--m2);
+    clip-path:polygon(78.8% 0, 50% 50% ,100% 21.25%);}
+#line-M3 {
+    background:var(--m3);
+    clip-path:polygon(100% 21.25%, 50% 50% ,100% 50%);}
+#line-M4 {
+    background:var(--m4);
+    clip-path:polygon(100% 50%, 50% 50% ,100% 78.8%);}
+#line-M5 {
+    background:var(--m5);
+    clip-path:polygon(100% 78.8%, 50% 50%, 78.8% 100%);}
+#line-M6 {
+    background:var(--m6);
+    clip-path:polygon(78.8% 100%, 50% 50%, 50% 100%);}
+#line-M7 {
+    background:var(--m7);
+    clip-path:polygon(50% 100%, 50% 50%, 21.25% 100%);}
+#line-M8 {
+    background:var(--m8);
+    clip-path:polygon(21.25% 100%, 50% 50%, 0% 78.8%);}
+#line-M9 {
+    background:var(--m9);
+    clip-path:polygon(0 50%, 50% 50%, 0 78.8%);}
+#line-M10{
+    background:var(--m10);
+    clip-path:polygon(0 21.25%, 50% 50%, 0 50% );}
+#line-M11{
+    background:var(--m11);
+    clip-path:polygon(21.25% 0, 50% 50%, 0 21.25%);}
+#line-M12{
+    background:var(--m12);
+    clip-path:polygon(50% 0, 50% 50%, 21.25% 0);}
+
+
+/*  */
+#pie-02{
+    position:absolute;
+    width:91%; aspect-ratio:1/1;
+    border:1px solid red;
+    border-radius:50%;
+}

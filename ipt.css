@@ -1,0 +1,135 @@
+@charset "utf-8";
+*{margin:0;padding:0;box-sizing:border-box;}
+html,body{
+    display:flex;flex-wrap:wrap;
+    flex-direction:column;
+    justify-content:center; align-items:center;
+    width:100%;min-height:100vh;
+    padding:1rem 0;
+    background:#ccc;
+    font-size:20px;
+}
+
+#sect_ipt{
+    display:flex;flex-wrap:wrap;
+    justify-content:space-evenly;
+    position:relative;
+    width:90%; max-width:500px;
+    padding:0 .5rem 1rem;
+    background:rgba(255,255,255,.5);
+}
+
+label{
+    display:block; position:relative;
+    width:calc(33% - 1rem);
+    padding-top:20px; margin:.5rem 0 0;}
+
+[id ^= "ipt-"]{
+    display:block;
+    padding:.5rem 1rem;
+    width:100%;
+    border:1px solid #d2d2d2;
+    font-family:inherit;font-size:14px;color:inherit;}
+
+[id ^= "ipt-"] + .lbl{
+    position:absolute;
+    top:0;left:5px;
+    font-size:12px;
+}
+
+#btn{
+    display:block;position:relative;
+    width:100%;
+    padding:1em 2em; margin-top:1rem;
+    background:teal;
+    border:none;
+    font-family:inherit;font-size:inherit; color:#fff;
+    cursor:pointer;
+}
+#btn:hover{filter:brightness(.8);}
+
+/*  */
+#sect_opt{
+    display:flex;flex-wrap:wrap;
+    justify-content:space-between; align-items:center;
+    position:relative;
+    width:500px;}
+
+/* 상대/절대 선택 */
+[type="checkbox"]{
+    position:absolute;overflow:hidden;
+    width:1px;height:1px;
+    clip:rect(0,0,0,0);}
+
+#lbl-check{  
+    display:block;position:relative;
+    min-width:200px;
+    font-family:inherit;font-size:14px;color:inherit;
+    cursor:pointer;}
+
+
+#lbl-check .lbl{
+    display:block;position:relative;
+    margin-bottom:1rem; padding-left:45px;
+    border:1px solid #d2d2d2;
+    font-size:1em; color:#999;}
+
+#is-rel:checked + .lbl{font-weight:bold; color:#000;}
+
+    #is-rel + .lbl::before{
+        content:'';display:block;position:absolute;
+        left:0;top:2px;
+        width:24px;height:10px;
+        border-radius:10px;
+        border:3px solid #aaa;}
+
+    #is-rel + .lbl::after{
+        content:'';display:block;position:absolute;
+        left:0;top:2px;
+        width:10px; aspect-ratio:1/1;
+        background:#ccc;
+        border:3px solid #aaa;
+        border-radius:50%;
+        transition:transform .3s;}
+
+    #is-rel:checked + .lbl::before{
+        background:teal;
+        border-color:teal;    }
+
+    #is-rel:checked + .lbl::after{
+        transform:translateX(100%);
+        background:#fff;
+        border-color:teal;    }
+
+/* select */
+select{
+    padding:.5em;
+    font-family:inherit;font-size:.875rem;
+}
+
+/* 그래프 영역--- */
+[id ^= "sect_graph"]{
+    position:relative;
+    width:500px;
+    margin:2rem auto 0;
+    background:#fff;}
+
+/* NAV */
+nav{
+    display:flex;flex-wrap:wrap;flex-direction:column;
+    position:fixed;
+    left:1rem;bottom:1rem;
+    font-size:14px;
+}
+
+nav a{
+    text-decoration:none;
+    display:block;
+    margin:.25em 0; padding:.5em;
+    background:rgba(255,255,255,.5);
+    text-align:center;font-weight:bold;color:#444;}
+
+nav a:hover{
+    background:teal;
+    color:#fff;
+}

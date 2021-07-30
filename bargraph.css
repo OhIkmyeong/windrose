@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+#sect_graph-bargraph{
+    height:250px;
+}
+
+[id ^= "line-"]{
+    position:absolute;
+    bottom:0; left:calc(var(--i) * 8% + 3%);
+    width:6%;height:90%;
+    background:linear-gradient(to top,blue,turquoise);
+}
+
+
+.dot{
+    display:block;position:absolute;
+    top:-16px;left:0;
+    width:100%;
+    text-align:center; font-size:12px; color:red;
+}
